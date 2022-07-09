@@ -1,0 +1,53 @@
+.sidemenu {
+  width: 25%;
+  height: 100vh;
+  border-radius: 0 15px 15px 0;
+  color: white;
+  background-color: #4c56c0;
+}
+.menuItem {
+  display: block;
+  margin-left: 40px;
+  margin-top: 40px;
+  padding: 5px 0px 5px 10px;
+  border-radius: 10px 0 0 10px;
+  color: white;
+  text-decoration: none;
+}
+.menuItem:hover {
+  color: #4c56c0;
+  background-color: white;
+  transition: 0.3s ease-out;
+}
+.menuItemActove {
+  display: block;
+  margin-left: 40px;
+  margin-top: 40px;
+  padding: 5px 0px 5px 10px;
+  border-radius: 10px 0 0 10px;
+  text-decoration: none;
+  color: #4c56c0;
+  background-color: white;
+  transition: 0.3s ease-out;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+}
+.logo {
+  margin-top: 40px;
+  width: 6vw;
+  border-radius: 50%;
+}
+.userShortInfo {
+  width: 100%;
+  text-align: center;
+}
+.category {
+  display: inline;
+  margin-left: 1vw;
+}
+.navigationContainer {
+  margin-top: 80px;
+}
