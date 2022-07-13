@@ -6,8 +6,11 @@ let Header = (props) => {
   const [events, setEvents] = useState(0);
   useEffect(()=>{
     props.setUserEvents(props.events_url);
+    props.setUserFollowers();
+    props.setUserRepos();
     setEvents(props.events)
   },[props.events_url]);
+
   return (
     <div className={classes.header}>
       <div className={classes.welcome}>

@@ -25,7 +25,6 @@ let Followers = (props) => {
 
 
   useEffect(() => {
-    props.setUserFollowers();
     setFollowers(props.followers);
   }, [props.followers]);
 

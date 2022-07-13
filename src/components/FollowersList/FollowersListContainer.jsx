@@ -1,7 +1,6 @@
 import { compose } from "redux";
 import { connect } from "react-redux";
 import Followers from "./FollowersList";
-import { setUserFollowersThunk } from "../../Store/thunks";
 
 let mapStateToProps = (state) => {
   return {
@@ -9,11 +8,7 @@ let mapStateToProps = (state) => {
   };
 };
 let mapDispatchToProps = (dispatch) => {
-  return {
-    setUserFollowers: () => {
-      setUserFollowersThunk(dispatch);
-    },
-  };
+  return {};
 };
 
 export default compose(connect(mapStateToProps, mapDispatchToProps))(Followers);

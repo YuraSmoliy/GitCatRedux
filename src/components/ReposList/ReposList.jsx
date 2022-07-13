@@ -24,7 +24,6 @@ let ReposList = (props) => {
   };
 
   useEffect(() => {
-    props.setUserRepos();
     setUserdata(props.repositories);
   }, [props.repositories]);
 

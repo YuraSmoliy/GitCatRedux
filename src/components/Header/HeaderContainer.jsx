@@ -1,6 +1,6 @@
 import { compose } from "redux";
 import { connect } from "react-redux";
-import { setUserEventsThunk } from "../../Store/thunks";
+import { setUserEventsThunk, setUserFollowersThunk, setUserReposThunk } from "../../Store/thunks";
 import Header from "./Header";
 
 let mapStateToProps = (state) => {
@@ -16,6 +16,12 @@ let mapDispatchToProps = (dispatch) => {
   return {
     setUserEvents: (events_url) => {
       setUserEventsThunk(dispatch, events_url);
+    },
+    setUserFollowers: () => {
+      setUserFollowersThunk(dispatch);
+    },
+    setUserRepos: () => {
+      setUserReposThunk(dispatch);
     },
   };
 };
