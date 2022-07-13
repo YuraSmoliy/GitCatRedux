@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "91a8c0fef010f11df09c",
+    "revision": "0df5f9bffb06e829663f",
     "url": "/GitCatRedux/static/css/main.6b467c8c.chunk.css"
   },
   {
-    "revision": "91a8c0fef010f11df09c",
-    "url": "/GitCatRedux/static/js/main.91a8c0fe.chunk.js"
+    "revision": "0df5f9bffb06e829663f",
+    "url": "/GitCatRedux/static/js/main.0df5f9bf.chunk.js"
   },
   {
     "revision": "a322975c65224bc82c97",
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/GitCatRedux/static/media/github-logo.53011edb.png"
   },
   {
-    "revision": "e1fd975a34aaaeb6ecd4dbd8960506b4",
+    "revision": "9497be7e00605b877aaebaec305ef603",
     "url": "/GitCatRedux/index.html"
   }
 ];
