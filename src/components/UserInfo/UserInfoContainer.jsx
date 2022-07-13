@@ -1,7 +1,6 @@
 import { compose } from "redux";
 import { connect } from "react-redux";
 import UserInfo from "./UserInfo";
-import { setUserInfoThunk } from "../../Store/thunks";
 
 let mapStateToProps = (state) => {
   return {

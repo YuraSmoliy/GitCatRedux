@@ -1,5 +1,4 @@
 import React from "react";
-import { memo } from "react";
 
 let Filter = (props) => {
   let search = (event) => {

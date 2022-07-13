@@ -1,4 +1,4 @@
-import React, { useContext, memo } from "react";
+import React, { memo } from "react";
 import classes from "./UserInfo.module.css";
 import LoadingView from "../LoadingView/LoadingView";
 

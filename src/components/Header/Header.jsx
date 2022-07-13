@@ -1,14 +1,12 @@
-import React, {useEffect, useState, memo } from "react";
+import React, {useEffect, memo } from "react";
 import classes from "./Header.module.css";
 import logo from "../../assets/github-logo.png";
 
 let Header = (props) => {
-  const [events, setEvents] = useState(0);
   useEffect(()=>{
     props.setUserEvents(props.events_url);
     props.setUserFollowers();
     props.setUserRepos();
-    setEvents(props.events)
   },[props.events_url, props.repos, props.followers]);
 
   return (

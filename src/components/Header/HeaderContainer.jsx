@@ -4,7 +4,6 @@ import { setUserEventsThunk, setUserFollowersThunk, setUserReposThunk } from "..
 import Header from "./Header";
 
 let mapStateToProps = (state) => {
-  console.log(state.userInfo.user_info.events_url)
   return {
     events:state.events.events ? state.events.events.length : null,
     followers:state.followers.followers ? state.followers.followers.length : null,

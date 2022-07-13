@@ -1,4 +1,4 @@
-import React, { useContext, memo } from "react";
+import React from "react";
 import classes from "./SideMenu.module.css";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
