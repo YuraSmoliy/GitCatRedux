@@ -9,7 +9,7 @@ let Header = (props) => {
     props.setUserFollowers();
     props.setUserRepos();
     setEvents(props.events)
-  },[props.events_url]);
+  },[props.events_url, props.repos, props.followers]);
 
   return (
     <div className={classes.header}>
