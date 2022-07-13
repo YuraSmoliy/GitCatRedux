@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "e7669222b8f79d9436e8",
-    "url": "/GitCatRedux/static/css/main.8c12f2c9.chunk.css"
+    "revision": "11e6ce1aa04879f934f9",
+    "url": "/GitCatRedux/static/css/main.6b467c8c.chunk.css"
   },
   {
-    "revision": "e7669222b8f79d9436e8",
-    "url": "/GitCatRedux/static/js/main.e7669222.chunk.js"
+    "revision": "11e6ce1aa04879f934f9",
+    "url": "/GitCatRedux/static/js/main.11e6ce1a.chunk.js"
   },
   {
     "revision": "a322975c65224bc82c97",
     "url": "/GitCatRedux/static/js/1.a322975c.chunk.js"
   },
   {
-    "revision": "5c1ec9776ef09bd126fa",
-    "url": "/GitCatRedux/static/js/2.5c1ec977.chunk.js"
+    "revision": "24c01aeb9b625953c793",
+    "url": "/GitCatRedux/static/js/2.24c01aeb.chunk.js"
   },
   {
     "revision": "21a9bd0f34c76b9e26b2",
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/GitCatRedux/static/media/github-logo.53011edb.png"
   },
   {
-    "revision": "2847f0f09b3ab509c0ab92ba0449c70a",
+    "revision": "239c8c8b72a3264a4ae3e00b43a193c3",
     "url": "/GitCatRedux/index.html"
   }
 ];
