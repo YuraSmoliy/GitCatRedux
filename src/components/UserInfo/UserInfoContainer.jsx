@@ -14,11 +14,7 @@ let mapStateToProps = (state) => {
   };
 };
 let mapDispatchToProps = (dispatch) => {
-  return {
-    setUserInfo: () => {
-      setUserInfoThunk(dispatch);
-    },
-  };
+  return {};
 };
 
 export default compose(connect(mapStateToProps, mapDispatchToProps))(UserInfo);

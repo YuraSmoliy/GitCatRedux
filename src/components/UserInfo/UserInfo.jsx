@@ -3,7 +3,6 @@ import classes from "./UserInfo.module.css";
 import LoadingView from "../LoadingView/LoadingView";
 
 let UserInfo = (props) => {
-  props.setUserInfo();
   let login = props.login || null;
 
   return (

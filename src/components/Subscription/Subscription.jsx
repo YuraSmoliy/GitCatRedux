@@ -25,7 +25,7 @@ let Subscription = (props) => {
   useEffect(() => {
     props.setUserSubscription();
     setSubscription(props.subscriptions);
-  }, []);
+  }, [props.subscriptions]);
 
   return (
     <>
