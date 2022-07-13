@@ -9,6 +9,8 @@ export const getUserEvents = async (received_events_url) => {
   let userEventsData = await fetch(received_events_url)
     .then((res) => res.json())
     .catch(() => {});
+    console.log(received_events_url)
+    console.log(userEventsData)
   return userEventsData;
 };
 

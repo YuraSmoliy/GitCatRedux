@@ -1,21 +1,13 @@
-import React, { useContext, useEffect, useState, memo } from "react";
-import { UserInfoContext } from "../UserContext/UserContext";
-import { getUserEvents } from "../../services/fetchUser";
+import React, {useEffect, useState, memo } from "react";
 import classes from "./Header.module.css";
 import logo from "../../assets/github-logo.png";
 
-let Header = () => {
-  let context = useContext(UserInfoContext);
+let Header = (props) => {
   const [events, setEvents] = useState(0);
-
-  useEffect(() => {
-    let setData = async () => {
-      let userEvents = await getUserEvents(context.received_events_url);
-      setEvents(userEvents);
-    };
-    setData();
-  }, [context.received_events_url]);
-
+  useEffect(()=>{
+    props.setUserEvents(props.events_url);
+    setEvents(props.events)
+  },[props.events_url]);
   return (
     <div className={classes.header}>
       <div className={classes.welcome}>
@@ -27,15 +19,15 @@ let Header = () => {
         <div className={classes.dataContainer}>
           <div className={classes.dataLine}>
             <div className={classes.key}>Received events</div>
-            <div className={classes.value}>{events ? events.length : 0}</div>
+            <div className={classes.value}>{props.events}</div>
           </div>
           <div className={classes.dataLine}>
             <div className={classes.key}>Followers</div>
-            <div className={classes.value}>{context.followers}</div>
+            <div className={classes.value}>{props.followers}</div>
           </div>
           <div className={classes.dataLine}>
             <div className={classes.key}>Repos</div>
-            <div className={classes.value}>{context.public_repos}</div>
+            <div className={classes.value}>{props.repos}</div>
           </div>
         </div>
       </div>

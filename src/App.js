@@ -1,39 +1,37 @@
-import Header from "./components/Header/Header";
-import SideMenu from "./components/SideMenu/SideMenu";
-import ReposList from "./components/ReposList/ReposList";
-import { Routes, Route, Link } from "react-router-dom";
+import ReposListContainer from "./components/ReposList/ReposListContainer";
+import { Routes, Route } from "react-router-dom";
 import React from "react";
-import UserInfo from "./components/UserInfo/UserInfo";
-import FollowersList from "./components/FollowersList/FollowersList";
-import Subscription from "./components/Subscription/Subscription";
+import SubscriptionContainer from "./components/Subscription/SubscriptionContainer";
 import classes from "./App.module.css";
-import UserInfoData from "./components/UserContext/UserContext";
 import UserInfoContainer from "./components/UserInfo/UserInfoContainer";
+import FollowersListContainer from "./components/FollowersList/FollowersListContainer";
+import SideMenuContainer from "./components/SideMenu/SideMenuContainer";
+import HeaderContainer from "./components/Header/HeaderContainer";
 
 function App() {
   return (
-    <UserInfoData>
+    <>
       <div className={classes.app}>
-        <SideMenu />
+        <SideMenuContainer />
         <div className={classes.mainSection}>
-          <Header />
+          <HeaderContainer />
           <div className={classes.appContent}>
             <Routes>
-              <Route exact path="/" element={<ReposList />}></Route>
+              <Route exact path="/" element={<ReposListContainer />}></Route>
               <Route
                 exact
                 path="/users/:accountName/reposlist"
-                element={<ReposList />}
+                element={<ReposListContainer />}
               ></Route>
               <Route
                 exact
                 path="/users/:accountName/followers"
-                element={<FollowersList />}
+                element={<FollowersListContainer />}
               ></Route>
               <Route
                 exact
                 path="/users/:accountName/subscription"
-                element={<Subscription />}
+                element={<SubscriptionContainer />}
               ></Route>
               <Route
                 exact
@@ -44,7 +42,7 @@ function App() {
           </div>
         </div>
       </div>
-    </UserInfoData>
+    </>
   );
 }
 

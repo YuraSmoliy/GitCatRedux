@@ -1,13 +1,10 @@
 import React, { useContext, memo } from "react";
-import { UserInfoContext } from "../UserContext/UserContext";
 import classes from "./UserInfo.module.css";
 import LoadingView from "../LoadingView/LoadingView";
 
 let UserInfo = (props) => {
-  // console.log(props);
   props.setUserInfo();
-  let context = useContext(UserInfoContext);
-  let login = context.login || null;
+  let login = props.login || null;
 
   return (
     <>

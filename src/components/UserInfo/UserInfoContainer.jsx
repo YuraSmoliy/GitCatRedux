@@ -1,16 +1,16 @@
 import { compose } from "redux";
 import { connect } from "react-redux";
 import UserInfo from "./UserInfo";
-import { setUserInfoThunk } from "../Store/thunks";
+import { setUserInfoThunk } from "../../Store/thunks";
 
 let mapStateToProps = (state) => {
   return {
-    login: state.userInfo.userinfo.login,
-    company: state.userInfo.userinfo.company,
-    email: state.userInfo.userinfo.email,
-    avatar_url: state.userInfo.userinfo.avatar_url,
-    blog: state.userInfo.userinfo.blog,
-    repos_url: state.userInfo.userinfo.repos_url,
+    login: state.userInfo.user_info.login,
+    company: state.userInfo.user_info.company,
+    email: state.userInfo.user_info.email,
+    avatar_url: state.userInfo.user_info.avatar_url,
+    blog: state.userInfo.user_info.blog,
+    repos_url: state.userInfo.user_info.repos_url,
   };
 };
 let mapDispatchToProps = (dispatch) => {

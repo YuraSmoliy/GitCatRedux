@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { getUserSubscriptons } from "../../services/fetchUser";
 import Presentation from "../Presentation/Presentation";
 import LoadingView from "../LoadingView/LoadingView";
 
-let Subscription = () => {
+let Subscription = (props) => {
   const [subscriptions, setSubscription] = useState(null);
   const [search, setSearch] = useState("");
   let [filteredList, setFilteredList] = useState(null);
@@ -24,11 +23,8 @@ let Subscription = () => {
   };
 
   useEffect(() => {
-    let setData = async () => {
-      let userData = await getUserSubscriptons("mojombo");
-      setSubscription(userData);
-    };
-    setData();
+    props.setUserSubscription();
+    setSubscription(props.subscriptions);
   }, []);
 
   return (

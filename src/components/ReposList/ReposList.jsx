@@ -3,7 +3,7 @@ import { getUserRepositories } from "../../services/fetchUser";
 import Presentation from "../Presentation/Presentation";
 import LoadingView from "../LoadingView/LoadingView";
 
-let ReposList = () => {
+let ReposList = (props) => {
   let [data, setUserdata] = useState(null);
   const [search, setSearch] = useState("");
   let [filteredList, setFilteredList] = useState(null);
@@ -24,11 +24,8 @@ let ReposList = () => {
   };
 
   useEffect(() => {
-    let setData = async () => {
-      let userData = await getUserRepositories("mojombo");
-      setUserdata(userData);
-    };
-    setData();
+    props.setUserRepos();
+    setUserdata(props.repositories);
   }, []);
 
   return (

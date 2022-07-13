@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { getUserFollowers } from "../../services/fetchUser";
 import LoadingView from "../LoadingView/LoadingView";
 import Presentation from "../Presentation/Presentation";
 
-let Followers = () => {
+let Followers = (props) => {
+
   const [followers, setFollowers] = useState(null);
   const [search, setSearch] = useState("");
   let [filteredList, setFilteredList] = useState(null);
@@ -23,12 +23,10 @@ let Followers = () => {
     );
   };
 
+
   useEffect(() => {
-    let setData = async () => {
-      let userData = await getUserFollowers("mojombo");
-      setFollowers(userData);
-    };
-    setData();
+    props.setUserFollowers();
+    setFollowers(props.followers);
   }, []);
 
   return (
